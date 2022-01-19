@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-<form action="{{route('Storato')}}" method="POST">
+<form action="{{route('comics.Storato')}}" method="post">
     @csrf        
     <div class="mb-3">
         <label for="title" class="form-label">Titolo Fumetto</label>

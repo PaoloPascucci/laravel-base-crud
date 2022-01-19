@@ -9,7 +9,7 @@
         <nav class="nav mx-5">
             <a class="nav-link" href="{{ route('welcome') }}">Home</a>
             <a class="nav-link" href="{{ route('comics') }}">COMICS</a>
-            {{-- <a class="nav-link "  href="{{route('create')}}">New Comic</a>  --}}
+            <a class="nav-link "  href="{{route('comics.create')}}">New Comic</a> 
         </nav>
         <div class="input">
             <span>

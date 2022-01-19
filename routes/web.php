@@ -18,12 +18,12 @@ Route::get('/', function () {
 })->name('welcome');
 
 route::get('comics', 'ComicController@index')->name('comics');
+Route::get('comics/create', 'ComicController@create')->name('comics.create');
+Route::post('comics', 'ComicController@store')->name('comics.Storato');
 
 Route::get('comics/{comic}','ComicController@show')->name('comic');
 
 
-Route::get('comics/create', 'ComicController@create')->name('comics.create');
-Route::post('comics', 'ComicController@store')->name('comics.Storato');
 Route::get('comics/{comic}/edit', 'ComicController@edit')->name('comic.edit');
 Route::put('comics/{comic}', 'ComicController@update')->name('comic.update');
 Route::delete('comics/{comic}', 'ComicController@destroy')->name('comic.destroy');
