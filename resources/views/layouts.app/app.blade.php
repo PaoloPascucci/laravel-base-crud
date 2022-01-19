@@ -13,6 +13,16 @@
 
     </head>
     <body>
-        @yield('content')
+        @include('Factors.header')
+
+        <!-- /#site_header -->
+        <main id="site_main" class="py-5">
+            @yield('content')
+        </main>
+        <!-- /#site_main -->
+    
+        @include('Factors.footer')
+    
+        <!-- /#site_footer -->
     </body>
 </html>

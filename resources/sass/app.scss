@@ -1,1 +1,226 @@
-//
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+#site_header a {
+    font-weight: bold;
+}
+
+.input {
+    border: none;
+    border-bottom: 1px solid rgb(2, 130, 249);
+    text-align: end;
+    width: 130px;
+}
+
+.blue {
+    background-color: rgb(2, 130, 249);
+    color: white;
+    text-align: end;
+}
+
+.important {
+    color: rgb(2, 130, 249);
+}
+
+.comics {
+    background-color: rgb(28, 28, 28);
+}
+
+.comics .card {
+    background-color: rgb(28, 28, 28);
+}
+
+.card img {
+    object-fit: cover;
+    object-position: top;
+    height: 200px;
+    margin: 1rem;
+}
+
+.card p {
+    margin-left: 1rem;
+    font-weight: bold;
+}
+
+.jumbotron {
+    height: 410px;
+    background-image: url('../img/jumbotron.jpg')
+}
+
+.follow {
+    color: blue;
+}
+
+.text-bottom {
+    margin: 20px 1rem 0 0;
+}
+
+.buy {
+    background-color: rgb(2, 130, 249);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links img {
+    margin: 1rem;
+}
+
+.buy img {
+    height: 50px;
+    margin: 1rem;
+}
+
+#site_main {
+    padding: 0 !important;
+}
+
+#site_footer {
+    background-color: rgb(48, 48, 48);
+}
+
+footer button {
+    border: 1px solid rgb(2, 130, 249);
+    color: white;
+    background-color: rgb(48, 48, 48);
+    padding: 1rem;
+
+}
+
+.list {
+    background-size: cover;
+    height: 500px;
+    background-image: url('../img/footer-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.sx {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5rem;
+}
+
+.sx ul {
+    list-style: none;
+    color: #8f8f90;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    height: max-content;
+}
+
+.sx .LIF {
+    color: white;
+    font-size: 20px;
+    padding: 5px 0;
+}
+
+.sx li {
+    line-height: 25px;
+}
+
+
+.dx {
+    background-image: url('../img/dc-logo-bg.png');
+    background-position: right;
+    width: 562px;
+    background-repeat: no-repeat;
+}
+
+.W_1 {
+    width: 200px;
+    border: none;
+    Position: absolute;
+    top: 50%;
+    left: 20%;
+    background-color: transparent;
+    z-index: 1;
+}
+
+.C_img {
+    border: 1px solid white;
+}
+
+.com {
+    position: absolute;
+    top: 7%;
+    color: white;
+    background: rgb(0, 169, 217);
+    width: 50%;
+    text-align: center;
+    font-weight: 100 !important;
+}
+
+.gallery {
+    position: absolute;
+    top: 83%;
+    color: white;
+    background: rgb(0, 169, 217);
+    text-align: center;
+    font-weight: 100 !important;
+    width: 169px;
+}
+
+.blueline {
+    position: relative;
+    height: 100px;
+    background-color: rgb(2, 130, 249);
+}
+
+.green {
+    color: rgb(137, 229, 117)
+}
+
+.bg_green {
+    background: rgb(85, 186, 89)
+}
+
+.col-10 {
+    border-right: 1px solid grey;
+}
+
+.col-4 {
+    text-align: end;
+}
+
+.bg_green p {
+    margin: 1rem;
+    color: white;
+
+}
+
+H4 {
+    margin-bottom: 3rem;
+}
+
+.bg_grey {
+    background: rgb(246, 246, 246);
+}
+
+.and {
+    color: rgb(0, 169, 223)
+}
+
+.U {
+    text-transform: uppercase
+}
+
+.BL {
+    color: rgb(0, 63, 94)
+}
+
+.B_B {
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+}
+
