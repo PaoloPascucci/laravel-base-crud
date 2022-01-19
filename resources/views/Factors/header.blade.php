@@ -7,16 +7,9 @@
 
         @include('Factors.logo')
         <nav class="nav mx-5">
-            <a class="nav-link" href="{{ route('welcome') }}">CHARACTERS</a>
+            <a class="nav-link" href="{{ route('welcome') }}">Home</a>
             <a class="nav-link" href="{{ route('comics') }}">COMICS</a>
-            <a class="nav-link " href="#">MOVIES</a> 
-            <a class="nav-link " href="#">TV</a>
-            <a class="nav-link " href="#">GAMES</a>
-            <a class="nav-link " href="#">COLLECTIBLES</a>
-            <a class="nav-link " href="#">VIDEOS</a>
-            <a class="nav-link " href="#">FANS</a>
-            <a class="nav-link " href="#">NEWS</a>
-            <a class="nav-link " href="#">SHOP</a>
+            {{-- <a class="nav-link "  href="{{route('create')}}">New Comic</a>  --}}
         </nav>
         <div class="input">
             <span>
