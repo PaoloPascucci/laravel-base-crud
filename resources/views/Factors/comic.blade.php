@@ -7,19 +7,19 @@
 </div>
 <div class="blueline"></div>
 <div class="card W_1">
-    <img class="C_img" src="{{$comic['thumb']}}" alt="">
+    <img class="C_img" src="{{$comic->thumb}}" alt="">
     <p class="com">COMIC BOOK</p>
     <p class="gallery">VIEW GALLERY</p>
 </div>
 <div class="container">
-    <h2>{{ $comic['title']}}</h2>
+    <h2>{{ $comic->title}}</h2>
     <div class="row">
 
         <div class="col-8">
             <div class="row bg_green d-flex align-items-center">
 
                 <div class="col-10 justify-content-between d-flex align-items-center">
-                    <p><span class="green">U.S. Price:</span>{{$comic['price'] }}</p>
+                    <p><span class="green">U.S. Price:</span>{{$comic->price }}</p>
                     <span class="green">AVAILABLE</span>
                 </div>
                 <div class="col-2">
@@ -28,7 +28,7 @@
 
             </div>
             <div>
-                {{$comic['description']}}
+                {{$comic->description}}
             </div>
         </div>
         <div class="col-4">
