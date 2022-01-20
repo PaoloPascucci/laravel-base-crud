@@ -37,16 +37,28 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        $comic = new Comic();
-        $comic->title = $request->title;
-        $comic->description = $request->description;
-        $comic->thumb = $request->thumb;
-        $comic->price = $request->price;
-        $comic->series = $request->series;
+        //con validazione
+        $validate_data = $request->validate([
+            'title'=>'required | unique:comics',
+            'description'=>'nullable',
+            'thumb'=>'nullable',
+            'price'=>'nullable',
+            'series'=>'nullable'
+        ]);
+        Comic::create($validate_data);
 
-        $comic->save();
+        // //senza validazione
+        // $comic = new Comic();
+        // $comic->title = $request->title;
+        // $comic->description = $request->description;
+        // $comic->thumb = $request->thumb;
+        // $comic->price = $request->price;
+        // $comic->series = $request->series;
+
+        // $comic->save();
         
         return redirect()->route('comics');
+
     }
 
     /**
@@ -68,7 +80,7 @@ class ComicController extends Controller
      */
     public function edit(Comic $comic)
     {
-        //
+        //return view('comic.edit', compact('comic'));
     }
 
     /**
@@ -80,7 +92,16 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        //
+        /*       $validate_data = $request->validate([
+            'title'=>'required | unique:comics',
+            'description'=>'nullable',
+            'thumb'=>'nullable',
+            'price'=>'nullable',
+            'series'=>'nullable'
+        ]);
+        $comic->update($validate_data);
+        return redirect()->route('comic.index')->with('message')
+        */
     }
 
     /**
@@ -91,6 +112,7 @@ class ComicController extends Controller
      */
     public function destroy(Comic $comic)
     {
-        //
+        $comic->delete();
+        return redirect()->route('comics');
     }
 }

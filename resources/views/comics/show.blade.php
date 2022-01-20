@@ -36,6 +36,7 @@
             <img src="{{asset('img/adv.jpg')}}" alt="">
         </div>
     </div>
+    <a class="btn" href="{{route('comic.edit')}}"></a>
 </div>
 <div class="container-fluid bg_grey p-5">
     <div class="row">
