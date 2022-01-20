@@ -37,7 +37,11 @@
         </div>
     </div>
     <a class="btn btn-primary" href="{{route('comics.edit', $comic->id)}}"><i class="fas fa-edit"></i></a>
-    <a class="btn btn-danger" href="{{route('comic.destroy', $comic->id)}}"><i class="fas fa-trash"></i></a>
+    <form action="{{route('comic.destroy', $comic->id)}}" method="POST">
+    @csrf
+    @method('DELETE')
+    <button class="btn btn-danger" href=""><i class="fas fa-trash"></i></button>
+    </form>
 </div>
 <div class="container-fluid bg_grey p-5">
     <div class="row">
