@@ -80,7 +80,7 @@ class ComicController extends Controller
      */
     public function edit(Comic $comic)
     {
-        //return view('comic.edit', compact('comic'));
+        return view('comics.edit', compact('comic'));
     }
 
     /**
@@ -92,16 +92,15 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        /*       $validate_data = $request->validate([
-            'title'=>'required | unique:comics',
+       $validate_data = $request->validate([
+            'title'=>'required |max:255',
             'description'=>'nullable',
             'thumb'=>'nullable',
             'price'=>'nullable',
             'series'=>'nullable'
         ]);
         $comic->update($validate_data);
-        return redirect()->route('comic.index')->with('message')
-        */
+        return redirect()->route('comics')->with('message', 'Hai modificato un fumetto');
     }
 
     /**
@@ -113,6 +112,6 @@ class ComicController extends Controller
     public function destroy(Comic $comic)
     {
         $comic->delete();
-        return redirect()->route('comics');
+        return redirect()->route('comics')->with('message', 'Hai eliminato un fumetto');
     }
 }

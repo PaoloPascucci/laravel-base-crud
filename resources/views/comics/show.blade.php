@@ -36,7 +36,8 @@
             <img src="{{asset('img/adv.jpg')}}" alt="">
         </div>
     </div>
-    <a class="btn" href="{{route('comic.edit')}}"></a>
+    <a class="btn btn-primary" href="{{route('comics.edit', $comic->id)}}"><i class="fas fa-edit"></i></a>
+    <a class="btn btn-danger" href="{{route('comic.destroy', $comic->id)}}"><i class="fas fa-trash"></i></a>
 </div>
 <div class="container-fluid bg_grey p-5">
     <div class="row">
