@@ -93,7 +93,7 @@ class ComicController extends Controller
     public function update(Request $request, Comic $comic)
     {
        $validate_data = $request->validate([
-            'title'=>'required |max:255',
+            'title'=>'max:255',
             'description'=>'nullable',
             'thumb'=>'nullable',
             'price'=>'nullable',
