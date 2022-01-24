@@ -9,17 +9,17 @@
 <div class="comics">
     <div class="container">
         <div class="row gy-4">
-            @foreach($comics as $comic)
+            @foreach($movies as $movie)
             <div class="col-2">
-                <a href="{{route('comic', $comic->id)}}">
+                <a href="{{route('movie', $movie->id)}}">
                     <div class="card ">
-                        <img src="{{$comic->thumb}}" alt="">
-                        <p class="bold text-white">{{ $comic->series }}</p>
+                        <img src="{{$movie->thumb}}" alt="">
+                        <p class="bold text-white">{{ $movie->series }}</p>
                     </div>
                 </a>
             </div>
             @endforeach
-            <a class="btn btn-primary" href="{{route('comics.create', $comic->id)}}">Aggiungi Fumetto</a>
+            <a class="btn btn-primary" href="{{route('movies.create', $movie->id)}}">Aggiungi Film</a>
         </div>
     </div>
     <br>

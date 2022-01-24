@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\Comic;
+use App\Models\Movie;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
-class ComicController extends Controller
+class MovieController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +14,9 @@ class ComicController extends Controller
      */
     public function index()
     {
-        $comics = Comic::all();
+        $movies = Movie::all();
 
-        return view('admin.comics.index', compact('comics'));
+        return view('admin.movies.index', compact('movies'));
     }
 
     /**
@@ -27,7 +26,7 @@ class ComicController extends Controller
      */
     public function create()
     {
-        return view('admin.comics.create');
+        return view('admin.movies.create');
     }
 
     /**
@@ -38,81 +37,68 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        //con validazione
         $validate_data = $request->validate([
-            'title'=>'required | unique:comics',
+            'title'=>'required | unique:movies',
             'description'=>'nullable',
             'thumb'=>'nullable',
             'price'=>'nullable',
             'series'=>'nullable'
         ]);
-        Comic::create($validate_data);
-
-        //senza validazione
-        // $comic = new Comic();
-        // $comic->title = $request->title;
-        // $comic->description = $request->description;
-        // $comic->thumb = $request->thumb;
-        // $comic->price = $request->price;
-        // $comic->series = $request->series;
-
-        // $comic->save();
-        
-        return redirect()->route('comics');
-
+        Movie::create($validate_data);
+        return redirect()->route('movies');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Comic  $comic
+     * @param  \App\Models\Movie  $movie
      * @return \Illuminate\Http\Response
      */
-    public function show(Comic $comic)
+    public function show(Movie $movie)
     {
-        return view('admin.comics.show', compact('comic'));
+        return view('admin.movies.show', compact('movie'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Comic  $comic
+     * @param  \App\Models\Movie  $movie
      * @return \Illuminate\Http\Response
      */
-    public function edit(Comic $comic)
+    public function edit(Movie $movie)
     {
-        return view('admin.comics.edit', compact('comic'));
+        return view('admin.movies.edit', compact('movie'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Comic  $comic
+     * @param  \App\Models\Movie  $movie
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Comic $comic)
+    public function update(Request $request, Movie $movie)
     {
-       $validate_data = $request->validate([
+        $validate_data = $request->validate([
             'title'=>'max:255',
             'description'=>'nullable',
             'thumb'=>'nullable',
             'price'=>'nullable',
             'series'=>'nullable'
         ]);
-        $comic->update($validate_data);
-        return redirect()->route('comics')->with('message', 'Hai modificato un fumetto');
+        $movie->update($validate_data);
+        return redirect()->route('movies')->with('message', 'Hai modificato un fumetto');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Comic  $comic
+     * @param  \App\Models\Movie  $movie
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Comic $comic)
+    public function destroy(Movie $movie)
     {
-        $comic->delete();
-        return redirect()->route('comics');
+        $movie->delete();
+        return redirect()->route('movies');
     }
 }
