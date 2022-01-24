@@ -37,7 +37,7 @@
         </div>
     </div>
     <a class="btn btn-primary" href="{{route('movies.edit', $movie->id)}}"><i class="fas fa-edit"></i></a>
-    <form action="{{route('comic.destroy', $comic->id)}}" method="POST">
+    <form action="{{route('movie.destroy', $movie->id)}}" method="POST">
     @csrf
     @method('DELETE')
     <button class="btn btn-danger" href=""><i class="fas fa-trash"></i></button>
