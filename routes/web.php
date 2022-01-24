@@ -17,13 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
-route::get('comics', 'ComicController@index')->name('comics');
-Route::get('comics/create', 'ComicController@create')->name('comics.create');
-Route::post('comics', 'ComicController@store')->name('comics.Storato');
-
-Route::get('comics/{comic}','ComicController@show')->name('comic');
-
-
-Route::get('comics/{comic}/edit', 'ComicController@edit')->name('comics.edit');
-Route::put('comics/{comic}', 'ComicController@update')->name('comic.update');
-Route::delete('comics/{comic}', 'ComicController@destroy')->name('comic.destroy');
+Route::get('admin/comics', 'admin\ComicController@index')->name('comics');
+Route::get('admin/comics/create', 'admin\ComicController@create')->name('comics.create');
+Route::post('admin/comics', 'admin\ComicController@store')->name('comics.Storato');
+Route::get('admin/comics/{comic}','admin\ComicController@show')->name('comic');
+Route::get('admin/comics/{comic}/edit', 'admin\ComicController@edit')->name('comics.edit');
+Route::put('admin/comics/{comic}', 'admin\ComicController@update')->name('comic.update');
+Route::delete('admin/comics/{comic}', 'admin\ComicController@destroy')->name('comic.destroy');
